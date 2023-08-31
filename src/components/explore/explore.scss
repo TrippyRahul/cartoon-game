@@ -1,0 +1,210 @@
+$small : 380px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.explore{
+    width: 100%;
+    background-color: #fffbdd;
+    border-radius: 4rem 4rem 0rem 0rem;
+    padding:2rem;
+    .explore-container{
+        
+        .top{
+            overflow: hidden;
+            background-color: #cbfc01;
+            border-radius: 3rem;
+
+            ul{
+                display: flex;
+                padding: 2rem;
+                // width: 200%;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                gap: 2rem;
+                overflow: hidden;
+
+                animation: slideAnimation 30s linear infinite; /* Adjust the animation duration */
+
+                @keyframes slideAnimation {
+                  0% {
+                    transform: translateX(0%);
+                  }
+        
+                  100% {
+                    transform: translateX(-40%);
+                  }
+                }
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: nowrap;
+                    gap: 2rem;
+
+                    .icon{
+                        font-size: 3rem;
+                    }
+                    span{
+                        font-size: 3rem;
+                        font-family: 'Gasoek One', sans-serif;    
+                        word-break:keep-all;      
+                        text-transform: uppercase;   
+                        white-space: nowrap;   
+                    }
+                }
+
+                li:not(:last-child) {
+                    &::after {
+                      content: '';
+                      display: inline-block;
+                      width: 0rem; /* Adjust to match your gap */
+                    }
+                  }
+          
+                  /* Create a seamless transition */
+                  &:before {
+                    content: '';
+                    display: block;
+                    width: 50%; /* Set to half of the list width */
+                  }
+                
+            }
+        }
+
+        .bottom{
+            padding: 4rem 0rem;
+
+            h2{
+                margin-bottom: 4rem;
+                font-size: 6rem;
+                text-transform: uppercase;
+                text-align: center;
+                color: #302800;
+                line-height: 5rem;
+                font-family: 'Gasoek One', sans-serif;  
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-shadow:   0px -.3rem 0 #d9d3ab,  
+                                0px -.3rem 0 #d9d3ab,
+                                0px  .3rem 0 #d9d3ab,
+                                0px  .3rem 0 #d9d3ab,
+                                -.3rem  0px 0 #d9d3ab,  
+                                .3rem  0px 0 #d9d3ab,
+                                -.3rem  0px 0 #d9d3ab,
+                                .3rem  0px 0 #d9d3ab,
+                                -.3rem -.3rem 0 #d9d3ab,  
+                                .3rem -.3rem 0 #d9d3ab,
+                                -.3rem  .3rem 0 #d9d3ab,
+                                .3rem  .3rem 0 #d9d3ab,
+                                -.3rem  9px 0 #d9d3ab,
+                                0px  9px 0 #d9d3ab,
+                                .3rem  9px 0 #d9d3ab;  
+
+            }
+
+            .bottom-content{
+
+                .cards{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    @include for-small(){
+                        flex-direction: column;
+                    }
+
+                    @include for-medium(){
+                        flex-direction: column;
+                    }
+                    .card{
+                        overflow: hidden;
+                        border-radius: 3rem;
+                        min-width: 49.2%;
+                        height: 40rem;
+                        cursor: pointer;
+                        // padding: 2rem;
+                        
+                        @include for-small(){
+                           width: 100%;
+                        }
+
+
+                        -webkit-box-shadow: 3px 3px 10px 3px #dddddd;
+                        -moz-box-shadow: 3px 3px 10px 3px #dddddd;
+                        box-shadow: 3px 3px 10px 3px #dddddd;
+
+                        
+
+
+                        &:hover{
+                            .content{
+                                background-color: #1111113a;
+                                .title{
+                                    background-color: #cbfc01;
+
+                                    .icon{
+                                        color: #302800;
+                                    }
+                                }
+                            }
+                        }
+
+                        .content{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+
+                            .title{
+                                display: flex;
+                                align-items: center;
+                                gap: .5rem;
+                                padding: 2rem;
+                                border-radius: 3rem;
+                                margin-bottom: 2rem;
+                                background-color: white;
+                                width: 95%;
+                                -webkit-box-shadow: 3px 3px 10px 3px #989898;
+                                -moz-box-shadow: 3px 3px 10px 3px #989898;
+                                box-shadow: 3px 3px 10px 3px #989898;
+                                transition: .2s all ease-in-out;
+
+                                .icon{
+                                    font-size: 3rem;
+                                    color: #cbfc01;
+                                }
+
+                                p{
+                                    font-size: 2rem;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
