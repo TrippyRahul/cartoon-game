@@ -6,7 +6,7 @@ import Game from "./pages/game/Game";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Blogs from "./pages/blogs/Blogs";
-import Blog from "./pages/blog/blog";
+import Blog from "./pages/blog/Blog";
 
 const App = () => {
   return (
