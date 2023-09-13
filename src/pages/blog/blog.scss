@@ -1,0 +1,63 @@
+$small : 380px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.blog{
+    background-color: #fffbdd;
+    border-radius: 4rem 4rem 0rem 0rem;
+    padding:4rem;
+
+    @include for-small(){
+        padding: 2rem;
+    }
+
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 4rem;
+        gap: 4rem;
+
+
+        .titles{
+            font-size: 1.8rem;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .para{
+                h4{
+                    font-size: 1.8rem;
+                }
+
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+       
+    }
+}

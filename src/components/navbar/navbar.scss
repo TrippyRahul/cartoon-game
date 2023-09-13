@@ -37,22 +37,16 @@ $large : 992px;
             gap: .5rem;
             cursor: pointer;
 
-            .icon{
-                font-size: 4rem;
-                color: white;
-                margin-right: 2rem;
-            }
-
-            span{
-                color: white;
-                font-size: 2rem;
-                line-height: 2rem;
-                font-weight: bold;
-            }
-
             .logo{
                 display: flex;
                 align-items: center;
+
+                span{
+                    color: white;
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    font-weight: bold;
+                }
             }
         }
 

@@ -1,0 +1,184 @@
+$small : 380px;
+$medium : 768px;
+$large : 992px;
+
+
+@mixin for-small{
+    @media only screen and (max-width: $small) {
+        @content
+      }  
+}
+
+@mixin for-medium{
+    @media only screen and (max-width: $medium) {
+        @content
+      }  
+}
+
+@mixin for-large{
+    @media only screen and (max-width: $large) {
+        @content
+      }  
+}
+
+
+.blogs{
+    background-color: #fffbdd;
+    border-radius: 4rem 4rem 0rem 0rem;
+    padding:4rem;
+
+    @include for-small(){
+        padding: 2rem;
+    }
+
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 4rem;
+        gap: 10rem;
+
+
+        .top{
+            width: 100%;
+            display: flex;
+
+            @include for-small(){
+                flex-direction: column;
+                gap: 4rem;
+            }
+
+            @include for-medium(){
+                flex-direction: column;
+                gap: 4rem;
+
+            }
+
+            .titles{
+                flex: 1;
+
+                p{
+                    font-size: 2rem;
+                    color: #9700c6;
+                }
+                
+                h2{
+                    color: #302800;
+                    font-size: 4rem;
+                    line-height: 4rem;
+                    font-weight: bold;
+                }
+            }
+
+            .mail{
+                flex: 1;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                form{
+                    width: 100%;
+                    border-radius: 3rem;
+                    background-color: #fff;
+                    border: .3rem solid #9700c6;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    
+                    input{
+                        height: 100%;
+                        width: 70%;
+                        padding: 1rem 2rem;
+                        border: none;
+                        outline: none;
+                        font-size: 1.5rem;
+                        color: #9700c6;
+                    }
+                    
+                    button{
+                        height: 100%;
+                        width: 30%;
+                        padding: 1rem 2rem;
+                        border: .5rem solid #9700c6;
+                        border-radius: 3rem 0rem 0rem 3rem;
+                        background-color: #9700c6;
+                        color: #fff;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .content{
+            width: 100%;
+            display: flex;
+
+            .left{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .card{
+                    cursor: pointer;
+                    // width: 60%;
+                    padding: 2rem;
+                    // border: 1px solid red;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    .profile{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .5rem;
+                        
+                        .img{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 50%;
+                        }
+
+                        .profile-name{
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    &-title{
+                        h3{
+                            font-size: 2rem;
+                        }
+
+                        p{
+                            font-size: 1.5rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+
+                    &-desc{
+                        span{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .right{
+                flex: 1;
+                // border: 1px solid orange;
+            }
+        }
+    }
+}
