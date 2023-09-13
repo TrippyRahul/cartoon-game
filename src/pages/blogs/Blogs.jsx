@@ -6,21 +6,13 @@ const blogsData = [
   {
     id: "1",
     profile: "ex-1",
-    username: "Gaurav",
+    username: "underpin",
     title: "The Classic Arcade Game with pac-man ghost",
     desc: "The world's biggest Pac-Man video games are back. The Pacman arcade game is well recognised with the Pac-man logo and Pac-man ghost",
-    date: "Sep 09, 2023",
+    date: "Sep 10, 2023",
     slug: "packman",
   },
-  {
-    id: "2",
-    profile: "ex-2",
-    username: "Mohit",
-    title: "The Classic Arcade Game with pac-man ghost",
-    desc: "The world's biggest Pac-Man video games are back. The Pacman arcade game is well recognised with the Pac-man logo and Pac-man ghost",
-    date: "Sep 09, 2023",
-    slug: "packman-game",
-  },
+
 ];
 
 const Blogs = () => {
