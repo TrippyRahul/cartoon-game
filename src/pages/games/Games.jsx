@@ -1,5 +1,5 @@
 import React from "react";
-import "./blogs.scss";
+import "./games.scss";
 import { useNavigate } from "react-router-dom";
 
 const blogsData = [
@@ -12,14 +12,13 @@ const blogsData = [
     date: "Sep 10, 2023",
     slug: "packman",
   },
-
 ];
 
-const Blogs = () => {
+const Games = () => {
   const navigate = useNavigate();
 
   const onClickHandler = (slug) => {
-    navigate(`/blogs/${slug}`);
+    navigate(`/games/${slug}`);
   };
   return (
     <div className="blogs">
@@ -65,4 +64,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Games;

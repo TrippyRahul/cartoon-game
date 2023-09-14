@@ -19,9 +19,8 @@ const Navbar = () => {
         </div>
         <div className="middle">
           <ul>
-            <li>Games</li>
-            <Link to="/blogs">
-              <li>Blogs</li>
+            <Link to="/games">
+              <li>Games</li>
             </Link>
             <li>Merch</li>
             <li>Support</li>
@@ -49,9 +48,8 @@ const Navbar = () => {
         <div className="mobile-menu">
           <div className="mobile-menu-container">
             <ul>
-              <li>Games</li>
-              <Link to="/blogs">
-                <li>Blogs</li>
+              <Link to="/games">
+                <li>Games</li>
               </Link>
               <li>Merch</li>
               <li>Support</li>

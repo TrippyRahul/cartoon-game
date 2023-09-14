@@ -5,8 +5,8 @@ import Home from "./pages/home/Home";
 import Game from "./pages/game/Game";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Blogs from "./pages/blogs/Blogs";
 import Blog from "./pages/blog/Blog";
+import Games from "./pages/games/Games";
 
 const App = () => {
   return (
@@ -15,8 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:gameId" element={<Game />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:blogId" element={<Blog />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/games/:gameId" element={<Blog />} />
       </Routes>
       <Footer />
     </main>
