@@ -18,7 +18,10 @@ const Game = () => {
     <>
       <div className="game">
         <div className="game-container">
-          <Unity unityProvider={unityProvider} />
+          {/* <Unity unityProvider={unityProvider} /> */}
+          <iframe src="/games/slotGame/index.html" className="frame">
+            {" "}
+          </iframe>
         </div>
         <div className="game-desc">
           <div className="titles">
